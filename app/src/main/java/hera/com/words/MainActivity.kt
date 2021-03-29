@@ -38,7 +38,9 @@ class MainActivity : AppCompatActivity() {
 
         // AddWord button behaviour.
         binding.addButton.setOnClickListener {
-            if (viewModel.addWord(Word(viewModel.getWordListSize() + 1, binding.wordBox.text.toString()))) {
+            val word = Word(0, binding.wordBox.text.toString())
+            val isWordValid = viewModel.addWord(word)
+            if (isWordValid) {
                 binding.wordBox.text.clear()
             }
             closeKeyBoard()
@@ -46,8 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         // wordList observer
         viewModel.words.observe(this, Observer {
-            binding.recycler.adapter = WordListAdapter(viewModel)
-//            binding.recycler.adapter?.notifyItemInserted(viewModel.getWordListSize() - 1)
+            binding.recycler.adapter?.notifyDataSetChanged()
         })
     }
 
