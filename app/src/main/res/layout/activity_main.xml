@@ -6,7 +6,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/oxford_blue"
         tools:context=".MainActivity">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -24,34 +23,33 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/teal_bright"
+            android:layout_marginBottom="16dp"
             android:ems="10"
-            android:hint="Enter any word."
+            android:fontFamily="sans-serif-medium"
+            android:hint="Enter any word"
             android:inputType="textPersonName"
-            android:textColor="@color/teal_bright"
-            android:textColorHint="@color/teal_bright"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/add_button"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/teal_bright"
-            android:fontFamily="sans-serif-black"
-            android:text="Add"
-            android:textColor="@color/oxford_blue"
-            android:textSize="18sp"
+            android:clickable="true"
             app:layout_constraintBottom_toBottomOf="@+id/word_box"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/word_box" />
+            app:layout_constraintStart_toEndOf="@+id/word_box"
+            app:layout_constraintTop_toTopOf="@+id/word_box"
+            app:srcCompat="@drawable/baseline_add_white_18dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -4,6 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="oxford_blue">#FF001233</color>
     <color name="oxford_blue_light">#FF001845</color>
-    <color name="teal_bright">#FF92FFEE</color>
     <color name="red_light">#FFDC3345</color>
+    <color name="dark_chocolate">#FF443325</color>
+    <color name="light_chocolate">#FF533E2D</color>
+    <color name="chocolate">#FF4b3829</color>
+    <color name="mint">#FF84C9B6</color>
 </resources>
